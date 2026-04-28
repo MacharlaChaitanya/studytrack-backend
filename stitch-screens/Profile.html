@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StudyTrack AI - Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#ddd9d8",
+                        "inverse-surface": "#313030",
+                        "on-surface-variant": "#444748",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "tertiary": "#0a0400",
+                        "surface-container": "#f1edec",
+                        "primary-container": "#1e1e1e",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#594320",
+                        "on-secondary": "#ffffff",
+                        "surface": "#fdf8f8",
+                        "surface-bright": "#fdf8f8",
+                        "surface-container-high": "#ebe7e6",
+                        "primary": "#040505",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#626262",
+                        "on-primary-fixed-variant": "#474746",
+                        "outline": "#747878",
+                        "on-background": "#1c1b1b",
+                        "tertiary-container": "#2c1b00",
+                        "on-tertiary-container": "#9e825a",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f7f3f2",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#5f5e5e",
+                        "secondary": "#5e5e5e",
+                        "on-primary-fixed": "#1b1b1c",
+                        "inverse-primary": "#c8c6c5",
+                        "surface-container-highest": "#e5e2e1",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-primary-container": "#878585",
+                        "on-surface": "#1c1b1b",
+                        "secondary-container": "#e1dfdf",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#e2c195",
+                        "secondary-fixed": "#e4e2e2",
+                        "inverse-on-surface": "#f4f0ef",
+                        "on-tertiary-fixed": "#281800",
+                        "on-secondary-fixed-variant": "#464747",
+                        "outline-variant": "#c4c7c7",
+                        "tertiary-fixed": "#ffddb0",
+                        "surface-variant": "#e5e2e1",
+                        "error": "#ba1a1a",
+                        "background": "#fdf8f8",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "card-gap": "12px",
+                        "md": "16px",
+                        "unit": "4px",
+                        "sm": "8px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "xl": "32px",
+                        "container-padding": "20px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Manrope"],
+                        "h3": ["Manrope"],
+                        "h2": ["Manrope"],
+                        "body-sm": ["Manrope"],
+                        "h1": ["Manrope"],
+                        "button": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "body-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "h3": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "h2": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "h1": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "button": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #F5F5DC; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-background pb-32">
+<!-- TopAppBar -->
+<header class="bg-[#F5F5DC] dark:bg-stone-950 shadow-[0_4px_15px_0_rgba(30,30,30,0.04)] border-b border-stone-200/50 dark:border-stone-800 sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-5 py-3">
+<div class="flex items-center gap-3">
+<img alt="User avatar" class="w-8 h-8 rounded-full object-cover" data-alt="close-up portrait of a young person with calm expression, warm natural lighting, soft background blur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMFKXNOa6JkZPWHug2HjqNraI3DkYRLNCnlbMMCHcB6hmZQBnXmAHWY3tTP-7DRoyLMBHDWPlZ50VPxISm-cAhnS-OALPTseD-ir7PY5kJZiv03zlhPuV5q4t5oBD0QtD35L2VIebSV8H15MbAXykKLWPRFgpfLd5kbqRQYN5_D-suMAaJfm_bLmvkxqEXf1C5PTL5mPdFNIswPBBmixoeD6ZAYJGO6Rpumceud7e8mbrHcBo78QOLiPFmWMvR0dnJv4VBGlOvUY8"/>
+<span class="font-manrope font-extrabold text-stone-900 dark:text-stone-100 tracking-tighter text-h3 font-h3">StudyTrack AI</span>
+</div>
+<button class="text-[#C8A97E] dark:text-amber-200 hover:bg-[#FAF3E0] dark:hover:bg-stone-900 transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="px-container-padding py-lg max-w-2xl mx-auto flex flex-col gap-card-gap">
+<!-- Profile Header Card -->
+<section class="bg-[#FAF3E0] rounded-[16px] p-md shadow-[0_4px_15px_0_rgba(30,30,30,0.04)] flex flex-col items-center text-center gap-sm">
+<div class="relative mt-sm">
+<img alt="User Avatar Large" class="w-24 h-24 rounded-full border-4 border-[#F5F5DC] object-cover shadow-[0_4px_15px_0_rgba(30,30,30,0.04)]" data-alt="close-up portrait of a young person with calm expression, warm natural lighting, soft background blur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPy34-AIs17PD4ZViJls0LBkIY8Nig0ciW0K0bGYX1zqirXOJJi6fOO7Qnrl3CcARbX5iJtgmbdo6tdXTmRbSgejBwtCTB9RP0-t4zHOYYiMMR9EtCUGrAx-x8RhcAS0ExbEe-VogG1Bvi677KoExIMHHDyLOfWuWmQaqkyl5lMof6nt6Bgaan0ou7bf3h-amTL0jt9vqeqhPsXUtOs0K3d551DH3k1hhZk3aVOj1ROjKJhOcin3urseUj_YqoATwqscP7ySqcnWw"/>
+<button class="absolute bottom-0 right-0 bg-primary text-on-primary p-2 rounded-full shadow-md hover:bg-opacity-90">
+<span class="material-symbols-outlined text-[16px]" data-icon="edit">edit</span>
+</button>
+</div>
+<h1 class="text-h2 font-h2 text-on-surface mt-xs">Alex Chen</h1>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Scholarly Focus: <span class="font-semibold text-primary">Bar Exam 2024</span></p>
+</section>
+<!-- Bento Grid Stats -->
+<section class="grid grid-cols-2 gap-card-gap">
+<!-- Streak -->
+<div class="bg-[#FAF3E0] rounded-[16px] p-md shadow-[0_4px_15px_0_rgba(30,30,30,0.04)] flex flex-col justify-center items-center text-center gap-xs">
+<span class="material-symbols-outlined text-[#C8A97E] text-4xl mb-xs" data-icon="local_fire_department" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<p class="text-h2 font-h2 text-on-surface">5 Days</p>
+<p class="text-label-caps font-label-caps text-on-surface-variant">Current Streak</p>
+</div>
+<!-- Total Hours -->
+<div class="bg-[#FAF3E0] rounded-[16px] p-md shadow-[0_4px_15px_0_rgba(30,30,30,0.04)] flex flex-col justify-center items-center text-center gap-xs">
+<span class="material-symbols-outlined text-outline text-4xl mb-xs" data-icon="hourglass_empty">hourglass_empty</span>
+<p class="text-h2 font-h2 text-on-surface">124h</p>
+<p class="text-label-caps font-label-caps text-on-surface-variant">Total Study Hours</p>
+</div>
+<!-- Daily Goal (Full Width) -->
+<div class="col-span-2 bg-[#FAF3E0] rounded-[16px] p-md shadow-[0_4px_15px_0_rgba(30,30,30,0.04)] flex flex-col gap-sm">
+<div class="flex justify-between items-center">
+<p class="text-body-sm font-body-sm text-on-surface-variant">Daily Study Goal</p>
+<p class="text-body-md font-body-md font-semibold text-on-surface">4 of 6 Hours</p>
+</div>
+<!-- Progress Tracker -->
+<div class="h-1 bg-surface-dim rounded-full w-full overflow-hidden">
+<div class="h-full bg-[#C8A97E] rounded-full" style="width: 66%;"></div>
+</div>
+</div>
+</section>
+<!-- Actions -->
+<section class="flex flex-col gap-sm mt-md">
+<button class="w-full bg-[#C8A97E] text-[#1E1E1E] py-3 rounded-full text-button font-button shadow-[0_4px_15px_0_rgba(30,30,30,0.04)] hover:bg-opacity-90 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="manage_accounts">manage_accounts</span>
+                Edit Profile
+            </button>
+<button class="w-full bg-transparent border border-[#6B6B6B] text-on-surface py-3 rounded-full text-button font-button hover:bg-surface-dim transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="restart_alt">restart_alt</span>
+                Reset Data
+            </button>
+<button class="w-full bg-transparent text-error py-3 rounded-full text-button font-button hover:bg-error-container transition-colors flex items-center justify-center gap-2 mt-xs">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                Logout
+            </button>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 w-full rounded-t-3xl border-t border-stone-200/30 bg-[#FAF3E0] dark:bg-stone-900 shadow-[0_-8px_25px_0_rgba(30,30,30,0.08)] z-50">
+<div class="flex justify-around items-center px-4 pb-6 pt-3">
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 p-2 hover:text-stone-700 dark:hover:text-stone-300" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-manrope text-[10px] font-medium uppercase tracking-widest">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 p-2 hover:text-stone-700 dark:hover:text-stone-300" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="assignment_turned_in">assignment_turned_in</span>
+<span class="font-manrope text-[10px] font-medium uppercase tracking-widest">Tasks</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 p-2 hover:text-stone-700 dark:hover:text-stone-300" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="add_circle">add_circle</span>
+<span class="font-manrope text-[10px] font-medium uppercase tracking-widest">Add</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 p-2 hover:text-stone-700 dark:hover:text-stone-300" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="analytics">analytics</span>
+<span class="font-manrope text-[10px] font-medium uppercase tracking-widest">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-900 dark:text-amber-100 bg-stone-100 dark:bg-stone-800 rounded-2xl p-2 px-4 transition-all scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-manrope text-[10px] font-medium uppercase tracking-widest text-[#C8A97E] dark:text-amber-200">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

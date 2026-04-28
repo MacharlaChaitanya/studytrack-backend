@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Insights - StudyTrack AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#0a0400",
+                    "on-primary-container": "#878585",
+                    "surface-bright": "#fdf8f8",
+                    "on-tertiary-fixed": "#281800",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "secondary-fixed-dim": "#c7c6c6",
+                    "inverse-surface": "#313030",
+                    "on-secondary-fixed-variant": "#464747",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "outline": "#747878",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#e2c195",
+                    "tertiary-fixed": "#ffddb0",
+                    "inverse-on-surface": "#f4f0ef",
+                    "background": "#fdf8f8",
+                    "secondary-fixed": "#e4e2e2",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#c8c6c5",
+                    "surface-dim": "#ddd9d8",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-tertiary-container": "#9e825a",
+                    "primary-container": "#1e1e1e",
+                    "on-background": "#1c1b1b",
+                    "surface-container-low": "#f7f3f2",
+                    "surface-container": "#f1edec",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#2c1b00",
+                    "on-secondary-container": "#626262",
+                    "secondary": "#5e5e5e",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#c4c7c7",
+                    "primary-fixed": "#e5e2e1",
+                    "on-surface": "#1c1b1b",
+                    "on-surface-variant": "#444748",
+                    "surface": "#fdf8f8",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#594320",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#e1dfdf",
+                    "surface-variant": "#e5e2e1",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#ebe7e6",
+                    "on-primary-fixed": "#1b1b1c",
+                    "primary": "#040505",
+                    "surface-tint": "#5f5e5e",
+                    "on-primary-fixed-variant": "#474746"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "lg": "24px",
+                    "unit": "4px",
+                    "sm": "8px",
+                    "xl": "32px",
+                    "card-gap": "12px",
+                    "xs": "4px",
+                    "container-padding": "20px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Manrope"],
+                    "h3": ["Manrope"],
+                    "body-md": ["Manrope"],
+                    "h2": ["Manrope"],
+                    "label-caps": ["Manrope"],
+                    "button": ["Manrope"],
+                    "h1": ["Manrope"],
+                    "body-sm": ["Manrope"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "h3": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "button": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+                    "h1": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #F5F5DC;
+            font-family: 'Manrope', sans-serif;
+            color: #1E1E1E;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .whisper-shadow {
+            shadow-[0_4px_15px_rgba(30,30,30,0.04)];
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-[#F5F5DC] dark:bg-stone-950 fixed top-0 w-full z-50 shadow-[0_4px_15px_rgba(30,30,30,0.04)] dark:shadow-none border-none">
+<div class="flex justify-between items-center w-full px-5 h-16 max-w-screen-xl mx-auto">
+<button class="text-[#1E1E1E] dark:text-stone-100 active:scale-95 transition-transform duration-200 hover:bg-[#FAF3E0] dark:hover:bg-stone-900 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="text-xl font-bold tracking-tighter text-[#1E1E1E] dark:text-stone-50 font-manrope">StudyTrack AI</h1>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-[#C8A97E]/20">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="close-up portrait of a student smiling in a library, soft bokeh background of bookshelves, warm natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB94v1DToArOaCif06uUreGYWO_m8GYURFScUSQSfTgyDHuwDCGEgnV6eyGGA7DVAOBMagUzOVXdhlORr2XOZCaYhEDOS0Lhni3b5H6U1YKxAYocjzM_CrSBcF-cWl6pT3qGK21Y5cjgjqPnUlrNfQHJdSAPyNGqVxhzoNXQ4tH3Od_e3Oqka7cq2KBcrGQ-mhiVw6Qtkd8mjGRYkY6L0haAb7Ser9uCipC5N0jZ-7f4jStw35GAJ2-0E4k-1Pq9XUfOtzx_HWXwp4"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 pb-32 px-5 max-w-screen-xl mx-auto w-full">
+<!-- Header Section -->
+<section class="mb-8">
+<h2 class="font-h1 text-h1 text-on-background mb-2">Personal Insights</h2>
+<p class="font-body-md text-body-md text-secondary">AI-driven analysis of your recent learning patterns and progress.</p>
+</section>
+<!-- Bento Grid Insights -->
+<div class="grid grid-cols-1 md:grid-cols-6 gap-card-gap">
+<!-- High Priority Insight (Large Card) -->
+<div class="md:col-span-4 bg-[#FAF3E0] p-md rounded-[16px] shadow-[0_4px_15px_rgba(30,30,30,0.04)] flex flex-col justify-between border-l-4 border-[#C8A97E]">
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-[#C8A97E]" data-icon="trending_down">trending_down</span>
+<span class="font-label-caps text-label-caps text-[#C8A97E]">Improvement Area</span>
+</div>
+<h3 class="font-h2 text-h2 mb-2">Your accuracy is low in Maths</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Recent quiz data shows a 15% drop in algebraic expressions. We recommend reviewing 'Quadratic Functions' before your next session.</p>
+</div>
+<div class="flex gap-3">
+<button class="bg-[#C8A97E] text-[#1E1E1E] px-6 py-2.5 rounded-full font-button text-button hover:opacity-90 active:scale-95 transition-all">Review Topic</button>
+<button class="border border-[#6B6B6B]/20 text-secondary px-6 py-2.5 rounded-full font-button text-button hover:bg-stone-100 transition-all">Dismiss</button>
+</div>
+</div>
+<!-- Consistency Card (Small Card) -->
+<div class="md:col-span-2 bg-[#FAF3E0] p-md rounded-[16px] shadow-[0_4px_15px_rgba(30,30,30,0.04)] flex flex-col items-center text-center justify-center border border-[#C8A97E]/10">
+<div class="w-16 h-16 rounded-full bg-[#C8A97E]/10 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-[#C8A97E] text-3xl" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<h3 class="font-h3 text-h3 mb-2">You are consistent, keep going</h3>
+<p class="font-body-sm text-body-sm text-secondary">7-day study streak maintained. This habit increases long-term retention by 40%.</p>
+</div>
+<!-- Focus Insight (Medium Card) -->
+<div class="md:col-span-3 bg-[#FAF3E0] p-md rounded-[16px] shadow-[0_4px_15px_rgba(30,30,30,0.04)] border border-[#C8A97E]/10">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-[#C8A97E]" data-icon="psychology">psychology</span>
+<span class="font-label-caps text-label-caps text-secondary">Study Strategy</span>
+</div>
+<h3 class="font-h3 text-h3 mb-3">Focus more on practice than theory</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">You've spent 4 hours reading notes but only 20 minutes on practice problems this week. Active recall is your strongest learning lever.</p>
+<div class="h-1 bg-stone-200 rounded-full w-full overflow-hidden">
+<div class="h-full bg-[#C8A97E] w-[30%]"></div>
+</div>
+<div class="flex justify-between mt-2">
+<span class="text-[10px] font-label-caps text-secondary">Practice</span>
+<span class="text-[10px] font-label-caps text-secondary">Theory</span>
+</div>
+</div>
+<!-- Time Management (Medium Card) -->
+<div class="md:col-span-3 bg-[#FAF3E0] p-md rounded-[16px] shadow-[0_4px_15px_rgba(30,30,30,0.04)] border border-[#C8A97E]/10 relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-[#C8A97E]" data-icon="schedule">schedule</span>
+<span class="font-label-caps text-label-caps text-secondary">Time Audit</span>
+</div>
+<h3 class="font-h3 text-h3 mb-2">Morning peak performance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Data suggests your focus score is 25% higher between 8 AM and 10 AM. Schedule your hardest tasks then.</p>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-8xl" data-icon="lightbulb">lightbulb</span>
+</div>
+</div>
+<!-- Micro Insights Row -->
+<div class="md:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-card-gap">
+<div class="bg-[#FAF3E0] px-md py-4 rounded-[16px] flex items-center gap-4 shadow-[0_4px_15px_rgba(30,30,30,0.04)]">
+<div class="p-2 rounded-lg bg-emerald-100 text-emerald-700">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</div>
+<div>
+<p class="font-label-caps text-[10px] text-secondary">BIOLOGY</p>
+<p class="font-body-sm font-semibold">Ready for Exam</p>
+</div>
+</div>
+<div class="bg-[#FAF3E0] px-md py-4 rounded-[16px] flex items-center gap-4 shadow-[0_4px_15px_rgba(30,30,30,0.04)]">
+<div class="p-2 rounded-lg bg-orange-100 text-orange-700">
+<span class="material-symbols-outlined" data-icon="warning">warning</span>
+</div>
+<div>
+<p class="font-label-caps text-[10px] text-secondary">HISTORY</p>
+<p class="font-body-sm font-semibold">Review Due</p>
+</div>
+</div>
+<div class="bg-[#FAF3E0] px-md py-4 rounded-[16px] flex items-center gap-4 shadow-[0_4px_15px_rgba(30,30,30,0.04)]">
+<div class="p-2 rounded-lg bg-blue-100 text-blue-700">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div>
+<p class="font-label-caps text-[10px] text-secondary">AI COACH</p>
+<p class="font-body-sm font-semibold">New Flashcards</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Motivational Graphic Footer -->
+<section class="mt-12 mb-8 bg-[#C8A97E] rounded-[24px] p-8 text-[#1E1E1E] flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="max-w-md">
+<h2 class="font-h2 text-h2 mb-4">"Small wins lead to big results."</h2>
+<p class="font-body-md text-body-md opacity-80">You've completed 85% of your weekly goals. Finish the remaining 3 tasks today to unlock your 'Weekly Master' badge.</p>
+</div>
+<div class="w-32 h-32 rounded-full border-4 border-[#1E1E1E]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl" data-icon="rocket_launch">rocket_launch</span>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#FAF3E0] dark:bg-stone-900 shadow-[0_-4px_25px_rgba(30,30,30,0.08)] border-t border-[#6B6B6B]/10 dark:border-stone-800 rounded-t-2xl">
+<button class="flex flex-col items-center justify-center text-[#6B6B6B] dark:text-stone-400 px-3 py-1.5 hover:opacity-80 transition-opacity active:scale-90 duration-150">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-manrope text-[10px] font-medium tracking-wide uppercase mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#6B6B6B] dark:text-stone-400 px-3 py-1.5 hover:opacity-80 transition-opacity active:scale-90 duration-150">
+<span class="material-symbols-outlined" data-icon="checklist_rtl">checklist_rtl</span>
+<span class="font-manrope text-[10px] font-medium tracking-wide uppercase mt-1">Tasks</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#6B6B6B] dark:text-stone-400 px-3 py-1.5 hover:opacity-80 transition-opacity active:scale-90 duration-150">
+<span class="material-symbols-outlined text-3xl" data-icon="add_circle">add_circle</span>
+<span class="font-manrope text-[10px] font-medium tracking-wide uppercase mt-1">Add</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#6B6B6B] dark:text-stone-400 px-3 py-1.5 hover:opacity-80 transition-opacity active:scale-90 duration-150">
+<span class="material-symbols-outlined" data-icon="bar_chart">bar_chart</span>
+<span class="font-manrope text-[10px] font-medium tracking-wide uppercase mt-1">Stats</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#1E1E1E] dark:text-white bg-[#C8A97E] rounded-xl px-3 py-1.5 active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="lightbulb" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<span class="font-manrope text-[10px] font-medium tracking-wide uppercase mt-1">Insights</span>
+</button>
+</nav>
+</body></html>

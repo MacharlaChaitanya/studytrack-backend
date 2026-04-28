@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StudyTrack AI - Welcome</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-dim": "#ddd9d8",
+                        "inverse-surface": "#313030",
+                        "on-surface-variant": "#444748",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "tertiary": "#0a0400",
+                        "surface-container": "#f1edec",
+                        "primary-container": "#1e1e1e",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#594320",
+                        "on-secondary": "#ffffff",
+                        "surface": "#fdf8f8",
+                        "surface-bright": "#fdf8f8",
+                        "surface-container-high": "#ebe7e6",
+                        "primary": "#040505",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#626262",
+                        "on-primary-fixed-variant": "#474746",
+                        "outline": "#747878",
+                        "on-background": "#1c1b1b",
+                        "tertiary-container": "#2c1b00",
+                        "on-tertiary-container": "#9e825a",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f7f3f2",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#5f5e5e",
+                        "secondary": "#5e5e5e",
+                        "on-primary-fixed": "#1b1b1c",
+                        "inverse-primary": "#c8c6c5",
+                        "surface-container-highest": "#e5e2e1",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-primary-container": "#878585",
+                        "on-surface": "#1c1b1b",
+                        "secondary-container": "#e1dfdf",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#e2c195",
+                        "secondary-fixed": "#e4e2e2",
+                        "inverse-on-surface": "#f4f0ef",
+                        "on-tertiary-fixed": "#281800",
+                        "on-secondary-fixed-variant": "#464747",
+                        "outline-variant": "#c4c7c7",
+                        "tertiary-fixed": "#ffddb0",
+                        "surface-variant": "#e5e2e1",
+                        "error": "#ba1a1a",
+                        "background": "#fdf8f8",
+                        "on-error": "#ffffff"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "card": "16px"
+                    },
+                    spacing: {
+                        "card-gap": "12px",
+                        "md": "16px",
+                        "unit": "4px",
+                        "sm": "8px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "xl": "32px",
+                        "container-padding": "20px"
+                    },
+                    fontFamily: {
+                        "label-caps": ["Manrope"],
+                        "h3": ["Manrope"],
+                        "h2": ["Manrope"],
+                        "body-sm": ["Manrope"],
+                        "h1": ["Manrope"],
+                        "button": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "body-md": ["Manrope"]
+                    },
+                    fontSize: {
+                        "label-caps": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "700" }],
+                        "h3": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+                        "h2": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }],
+                        "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+                        "h1": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "button": ["16px", { lineHeight: "24px", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }]
+                    },
+                    boxShadow: {
+                        'level-1': '0 4px 15px rgba(30, 30, 30, 0.04)',
+                        'level-2': '0 8px 25px rgba(30, 30, 30, 0.08)',
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-container-low min-h-screen flex flex-col items-center justify-center antialiased text-on-surface selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<main class="w-full max-w-md mx-auto h-[884px] flex flex-col justify-between px-container-padding py-xl relative z-10">
+<!-- Top Spacer & Brand Hint -->
+<div class="flex flex-col items-center pt-lg">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest opacity-80">StudyTrack AI</span>
+</div>
+<!-- Hero Section -->
+<div class="flex flex-col items-center text-center flex-grow justify-center gap-lg">
+<!-- Abstract Hero Image -->
+<div class="relative w-full max-w-[280px] aspect-square mb-lg rounded-card overflow-hidden shadow-level-1 bg-surface-container-lowest">
+<img alt="Abstract minimalist beige and warm white geometric shapes representing focus and clarity" class="object-cover w-full h-full opacity-90 mix-blend-multiply" data-alt="soft minimalist beige and warm white geometric shapes floating gently, soft studio lighting, academic zen atmosphere, completely uncluttered, premium 3d render" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjF6modc-0lhfOioc-3HTykSj0xPgYRhMF8UPyYoAdpMVlZ4NX2JqJgCCuA8Huyvqxx0SsfVqVELHwk-CH-5dCSDUvV6ZMtPclJUiy6fea_0iQQAcq2MPtes1PjpsRbJScPKmwOUeMGb3h46Fcmyn6sE1Pi-LBHSjHFz0wD-ChDEuRQ_1-yUTfFziBNLJJdgW8Zbt3DN3u0H93WwZCOiLJiKHXibMPUNn9h_eUks12IOzd-UXHue302bMT-lkDvGqjzVppZQG7J5I"/>
+</div>
+<!-- Typography Content -->
+<div class="flex flex-col gap-sm px-sm">
+<h1 class="font-h1 text-h1 text-on-surface">
+                    Improve your<br/>marks daily.
+                </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[260px] mx-auto mt-2">
+                    A distraction-free sanctuary for your academic focus and daily progress.
+                </p>
+</div>
+</div>
+<!-- Action Area -->
+<div class="flex flex-col w-full gap-card-gap pb-lg">
+<!-- Google Button (Level 1 Elevation) -->
+<button class="w-full h-14 flex items-center justify-center gap-sm bg-surface-container-lowest rounded-card shadow-level-1 transition-transform active:scale-[0.98] border border-surface-variant/50">
+<svg class="text-on-surface" height="20" viewbox="0 0 48 48" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z" fill="#FFC107"></path>
+<path d="m6.306 14.691 6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z" fill="#FF3D00"></path>
+<path d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z" fill="#4CAF50"></path>
+<path d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z" fill="#1976D2"></path>
+</svg>
+<span class="font-button text-button text-on-surface">Continue with Google</span>
+</button>
+<!-- Email Button (High Contrast Primary) -->
+<button class="w-full h-14 flex items-center justify-center gap-sm bg-primary rounded-card transition-transform active:scale-[0.98] shadow-level-1">
+<span class="material-symbols-outlined text-on-primary" style="font-variation-settings: 'FILL' 0, 'wght' 300;">mail</span>
+<span class="font-button text-button text-on-primary">Continue with Email (OTP)</span>
+</button>
+</div>
+</main>
+</body></html>

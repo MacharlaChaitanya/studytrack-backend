@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StudyTrack AI - Insights</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#ddd9d8",
+                        "inverse-surface": "#313030",
+                        "on-surface-variant": "#444748",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "tertiary": "#0a0400",
+                        "surface-container": "#f1edec",
+                        "primary-container": "#1e1e1e",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#594320",
+                        "on-secondary": "#ffffff",
+                        "surface": "#fdf8f8",
+                        "surface-bright": "#fdf8f8",
+                        "surface-container-high": "#ebe7e6",
+                        "primary": "#040505",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#626262",
+                        "on-primary-fixed-variant": "#474746",
+                        "outline": "#747878",
+                        "on-background": "#1c1b1b",
+                        "tertiary-container": "#2c1b00",
+                        "on-tertiary-container": "#9e825a",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f7f3f2",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#5f5e5e",
+                        "secondary": "#5e5e5e",
+                        "on-primary-fixed": "#1b1b1c",
+                        "inverse-primary": "#c8c6c5",
+                        "surface-container-highest": "#e5e2e1",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-primary-container": "#878585",
+                        "on-surface": "#1c1b1b",
+                        "secondary-container": "#e1dfdf",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#e2c195",
+                        "secondary-fixed": "#e4e2e2",
+                        "inverse-on-surface": "#f4f0ef",
+                        "on-tertiary-fixed": "#281800",
+                        "on-secondary-fixed-variant": "#464747",
+                        "outline-variant": "#c4c7c7",
+                        "tertiary-fixed": "#ffddb0",
+                        "surface-variant": "#e5e2e1",
+                        "error": "#ba1a1a",
+                        "background": "#fdf8f8",
+                        "on-error": "#ffffff",
+                        "accent": "#C8A97E",
+                        "accent-dim": "#FAF3E0",
+                        "beige-bg": "#F5F5DC"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "card-gap": "12px",
+                        "md": "16px",
+                        "unit": "4px",
+                        "sm": "8px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "xl": "32px",
+                        "container-padding": "20px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Manrope"],
+                        "h3": ["Manrope"],
+                        "h2": ["Manrope"],
+                        "body-sm": ["Manrope"],
+                        "h1": ["Manrope"],
+                        "button": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "body-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "h3": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "h2": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "h1": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "button": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    },
+                    "boxShadow": {
+                        "ambient-level-1": "0 4px 15px 0 rgba(30, 30, 30, 0.04)",
+                        "ambient-level-2": "0 8px 25px 0 rgba(30, 30, 30, 0.08)"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #F5F5DC; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface antialiased min-h-screen pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-[#F5F5DC] dark:bg-stone-950 font-manrope text-sm font-semibold tracking-wide docked full-width top-0 border-b border-stone-200/50 dark:border-stone-800 shadow-[0_4px_15px_0_rgba(30,30,30,0.04)] sticky z-40">
+<div class="flex justify-between items-center w-full px-5 py-3 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-accent-dim flex items-center justify-center overflow-hidden border border-outline-variant/30">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="Portrait of a scholarly young man with glasses, soft natural lighting, looking directly at camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtOBi8_Vlct66XL2ahPkIP3PcP2qTiCLtNNVFPNfF0jzUqkBCbn70_Ip9tvEYlm26kU2iTv5M1Tm90j7pyUoJL0Ou34N0t-kVZQBpC497UkoYu42vtFbipxvfBu-nPFnAji6OGFuLanFfH_kY639_9xHXwaxtNVZQgWJ-eRfbfgcofSGqF3whPifAVnAdS0kdmDY7stWBy_NRdqnrcZbF3oSJHMOjRiCw8veE9YqaLyy25l5fmtBtb8Fv50QSWvIXqueYcmoPjvx8"/>
+</div>
+</div>
+<h1 class="font-manrope font-extrabold text-stone-900 dark:text-stone-100 tracking-tighter text-h2 font-h2">StudyTrack AI</h1>
+<button class="text-[#C8A97E] dark:text-amber-200 hover:bg-[#FAF3E0] dark:hover:bg-stone-900 transition-colors p-2 rounded-full flex items-center justify-center active:opacity-80 active:scale-95 transition-all">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+<!-- Desktop Navigation (Hidden on Mobile) -->
+<nav class="hidden md:flex justify-center items-center gap-8 py-3 border-t border-stone-200/30">
+<a class="text-stone-500 dark:text-stone-400 font-button text-button hover:bg-[#FAF3E0] dark:hover:bg-stone-900 transition-colors px-4 py-2 rounded-lg" href="#">Home</a>
+<a class="text-stone-500 dark:text-stone-400 font-button text-button hover:bg-[#FAF3E0] dark:hover:bg-stone-900 transition-colors px-4 py-2 rounded-lg" href="#">Tasks</a>
+<a class="text-stone-500 dark:text-stone-400 font-button text-button hover:bg-[#FAF3E0] dark:hover:bg-stone-900 transition-colors px-4 py-2 rounded-lg" href="#">Add</a>
+<a class="text-[#C8A97E] font-bold font-button text-button hover:bg-[#FAF3E0] dark:hover:bg-stone-900 transition-colors px-4 py-2 rounded-lg" href="#">Stats</a>
+<a class="text-stone-500 dark:text-stone-400 font-button text-button hover:bg-[#FAF3E0] dark:hover:bg-stone-900 transition-colors px-4 py-2 rounded-lg" href="#">Profile</a>
+</nav>
+</header>
+<!-- Main Content -->
+<main class="max-w-7xl mx-auto px-container-padding py-xl flex flex-col gap-xl">
+<!-- Header Section -->
+<section class="flex flex-col gap-sm">
+<h2 class="font-h1 text-h1 text-on-surface">Actionable Insights</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">AI-driven recommendations to optimize your focus and academic performance.</p>
+</section>
+<!-- Bento Grid of Insights -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-card-gap">
+<!-- Insight Card 1 (High Priority / Fix This) -->
+<article class="bg-[#FAF3E0] rounded-[16px] p-md shadow-ambient-level-1 flex flex-col gap-md md:col-span-2 lg:col-span-2 border border-surface-dim/30">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-error-container/50 flex items-center justify-center text-error">
+<span class="material-symbols-outlined">warning</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-error bg-error-container/30 px-2 py-1 rounded-full uppercase">High Priority</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline">more_horiz</span>
+</div>
+<div class="flex flex-col gap-xs">
+<h3 class="font-h2 text-h2 text-on-surface">Your accuracy is low in Maths</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Over the last 3 practice sessions, your calculus theorem application accuracy dropped below 60%. Focusing here will yield the highest GPA impact.</p>
+</div>
+<div class="mt-auto pt-md flex items-center justify-between border-t border-surface-dim/40">
+<div class="flex items-center gap-sm text-outline font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span>Detected 2 hours ago</span>
+</div>
+<button class="bg-[#C8A97E] text-[#1E1E1E] font-button text-button px-6 py-2.5 rounded-full hover:opacity-90 transition-opacity flex items-center gap-sm shadow-ambient-level-2">
+<span>Fix This</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Insight Card 2 (Positive / Milestone) -->
+<article class="bg-[#FAF3E0] rounded-[16px] p-md shadow-ambient-level-1 flex flex-col gap-md border border-surface-dim/30">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed-dim/30 flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-tertiary-container bg-tertiary-fixed-dim/20 px-2 py-1 rounded-full uppercase">Milestone</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<h3 class="font-h3 text-h3 text-on-surface">Deep Work Peak</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">You've hit 4 hours of uninterrupted study in History. This is a 15% increase from last week's average.</p>
+</div>
+<div class="mt-auto pt-md flex items-center justify-between border-t border-surface-dim/40">
+<button class="text-on-surface-variant hover:text-on-surface font-button text-button flex items-center gap-xs transition-colors">
+<span>View Trends</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- Insight Card 3 (Recommendation) -->
+<article class="bg-[#FAF3E0] rounded-[16px] p-md shadow-ambient-level-1 flex flex-col gap-md border border-surface-dim/30">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-surface-dim/50 flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant bg-surface-dim/30 px-2 py-1 rounded-full uppercase">Suggestion</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<h3 class="font-h3 text-h3 text-on-surface">Optimize Schedule</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">You typically perform better on coding tasks in the morning. Consider moving your algorithm practice to 9 AM.</p>
+</div>
+<div class="mt-auto pt-md flex items-center justify-end border-t border-surface-dim/40">
+<button class="border border-outline/30 text-on-surface font-button text-button px-4 py-2 rounded-full hover:bg-surface-dim/20 transition-colors">
+                        Apply Change
+                    </button>
+</div>
+</article>
+<!-- Insight Card 4 (Fix This) -->
+<article class="bg-[#FAF3E0] rounded-[16px] p-md shadow-ambient-level-1 flex flex-col gap-md border border-surface-dim/30 md:col-span-2 lg:col-span-1">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-error-container/50 flex items-center justify-center text-error">
+<span class="material-symbols-outlined">error</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-error bg-error-container/30 px-2 py-1 rounded-full uppercase">Attention</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<h3 class="font-h3 text-h3 text-on-surface">Physics Quiz Imminent</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Your review coverage for Chapter 4 is incomplete.</p>
+</div>
+<div class="mt-auto pt-md flex items-center justify-between border-t border-surface-dim/40">
+<button class="bg-[#C8A97E] text-[#1E1E1E] font-button text-button px-5 py-2 rounded-full hover:opacity-90 transition-opacity flex items-center gap-xs shadow-ambient-level-2 w-full justify-center">
+<span>Fix This</span>
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</button>
+</div>
+</article>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden bg-[#FAF3E0] dark:bg-stone-900 font-manrope text-[10px] font-medium uppercase tracking-widest fixed bottom-0 w-full rounded-t-3xl border-t border-stone-200/30 shadow-[0_-8px_25px_0_rgba(30,30,30,0.08)] fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3">
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 p-2 hover:text-stone-700 dark:hover:text-stone-300" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span>Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 p-2 hover:text-stone-700 dark:hover:text-stone-300" href="#">
+<span class="material-symbols-outlined mb-1">assignment_turned_in</span>
+<span>Tasks</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 p-2 hover:text-stone-700 dark:hover:text-stone-300" href="#">
+<span class="material-symbols-outlined mb-1 text-[28px] text-[#C8A97E]">add_circle</span>
+<span>Add</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-900 dark:text-amber-100 bg-stone-100 dark:bg-stone-800 rounded-2xl p-2 px-4 transition-all hover:text-stone-700 dark:hover:text-stone-300 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="text-[#C8A97E] dark:text-amber-200">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 p-2 hover:text-stone-700 dark:hover:text-stone-300" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span>Profile</span>
+</a>
+</nav>
+</body></html>

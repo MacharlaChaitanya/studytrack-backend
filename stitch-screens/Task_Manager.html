@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "tertiary": "#0a0400",
+                  "on-primary-container": "#878585",
+                  "surface-bright": "#fdf8f8",
+                  "on-tertiary-fixed": "#281800",
+                  "primary-fixed-dim": "#c8c6c5",
+                  "secondary-fixed-dim": "#c7c6c6",
+                  "inverse-surface": "#313030",
+                  "on-secondary-fixed-variant": "#464747",
+                  "on-secondary-fixed": "#1b1c1c",
+                  "outline": "#747878",
+                  "surface-container-lowest": "#ffffff",
+                  "tertiary-fixed-dim": "#e2c195",
+                  "tertiary-fixed": "#ffddb0",
+                  "inverse-on-surface": "#f4f0ef",
+                  "background": "#fdf8f8",
+                  "secondary-fixed": "#e4e2e2",
+                  "on-error": "#ffffff",
+                  "inverse-primary": "#c8c6c5",
+                  "surface-dim": "#ddd9d8",
+                  "on-primary": "#ffffff",
+                  "surface-container-highest": "#e5e2e1",
+                  "on-tertiary-container": "#9e825a",
+                  "primary-container": "#1e1e1e",
+                  "on-background": "#1c1b1b",
+                  "surface-container-low": "#f7f3f2",
+                  "surface-container": "#f1edec",
+                  "error-container": "#ffdad6",
+                  "tertiary-container": "#2c1b00",
+                  "on-secondary-container": "#626262",
+                  "secondary": "#5e5e5e",
+                  "error": "#ba1a1a",
+                  "outline-variant": "#c4c7c7",
+                  "primary-fixed": "#e5e2e1",
+                  "on-surface": "#1c1b1b",
+                  "on-surface-variant": "#444748",
+                  "surface": "#fdf8f8",
+                  "on-error-container": "#93000a",
+                  "on-tertiary-fixed-variant": "#594320",
+                  "on-secondary": "#ffffff",
+                  "secondary-container": "#e1dfdf",
+                  "surface-variant": "#e5e2e1",
+                  "on-tertiary": "#ffffff",
+                  "surface-container-high": "#ebe7e6",
+                  "on-primary-fixed": "#1b1b1c",
+                  "primary": "#040505",
+                  "surface-tint": "#5f5e5e",
+                  "on-primary-fixed-variant": "#474746"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "spacing": {
+                  "md": "16px",
+                  "lg": "24px",
+                  "unit": "4px",
+                  "sm": "8px",
+                  "xl": "32px",
+                  "card-gap": "12px",
+                  "xs": "4px",
+                  "container-padding": "20px"
+          },
+          "fontFamily": {
+                  "body-lg": ["Manrope"],
+                  "h3": ["Manrope"],
+                  "body-md": ["Manrope"],
+                  "h2": ["Manrope"],
+                  "label-caps": ["Manrope"],
+                  "button": ["Manrope"],
+                  "h1": ["Manrope"],
+                  "body-sm": ["Manrope"]
+          },
+          "fontSize": {
+                  "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                  "h3": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                  "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                  "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                  "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                  "button": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+                  "h1": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                  "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body { background-color: #F5F5DC; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .shadow-ambient { shadow: 0 4px 15px rgba(30, 30, 30, 0.04); }
+    .card-zen { background-color: #FAF3E0; border-radius: 16px; box-shadow: 0 4px 15px rgba(30, 30, 30, 0.04); }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="bg-[#F5F5DC] dark:bg-stone-950 docked full-width top-0 border-none shadow-[0_4px_15px_rgba(30,30,30,0.04)] dark:shadow-none z-50 sticky">
+<div class="flex justify-between items-center w-full px-5 h-16 max-w-screen-xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="text-[#1E1E1E] dark:text-stone-100 active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-manrope font-semibold text-lg tracking-tight text-[#1E1E1E] dark:text-stone-50">StudyTrack AI</h1>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-stone-200 overflow-hidden border border-[#C8A97E]">
+<img alt="User profile photo" data-alt="close-up portrait of a student in a bright library environment, soft lighting, professional and calm aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUMT8RJzH8r6HiPgZ748vpo6eCxRVd7uFqtATr8z_8F3jddWs2fPcAW4li0K93jzZyNaRaXfig8oltfnaFBlrggJxQGts-Pn41WeVGmNUDNclrS8QUSjDdpN8IJG7IQ3EDALQXjpsZhWYJXAj0Kd2XIH3sBsW_pSGaVksBIBozdfu0QcRSmwI0bD6uFvt5dwWOKiF-a0rgp6wZYAqNVrRJF0nArIRVfF3ZRkMyXl8tV7qzI-stl_8l50JNl6Fp3XOIOJ_-dk6M3Ec"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-screen-xl mx-auto px-5 pt-8 pb-32">
+<!-- Progress Header Section -->
+<section class="mb-lg">
+<div class="card-zen p-md flex flex-col gap-4">
+<div class="flex justify-between items-end">
+<div>
+<h2 class="font-h2 text-h2 text-primary">Daily Focus</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">6 of 8 tasks completed</p>
+</div>
+<span class="font-h3 text-h3 text-[#C8A97E]">75%</span>
+</div>
+<div class="w-full bg-[#1E1E1E]/5 h-1 rounded-full overflow-hidden">
+<div class="bg-[#C8A97E] h-full rounded-full" style="width: 75%;"></div>
+</div>
+</div>
+</section>
+<!-- Categories & Task List -->
+<section class="flex flex-col gap-card-gap">
+<!-- Category Header -->
+<div class="flex items-center justify-between px-1">
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase">Urgent &amp; Important</h3>
+<span class="material-symbols-outlined text-on-surface-variant text-sm" data-icon="more_horiz">more_horiz</span>
+</div>
+<!-- Task Card 1 (Completed) -->
+<div class="card-zen p-md flex items-center gap-md hover:opacity-90 transition-opacity cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center rounded-lg border-2 border-[#C8A97E] bg-[#C8A97E] text-[#1E1E1E]">
+<span class="material-symbols-outlined text-[18px] font-bold" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="flex-1">
+<h4 class="font-body-md text-body-md line-through text-on-surface-variant">Review AI Ethics Paper</h4>
+<div class="flex gap-2 mt-1">
+<span class="px-2 py-0.5 bg-stone-200/50 rounded-full font-label-caps text-[10px] text-on-surface-variant uppercase">Philosophy</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="drag_indicator">drag_indicator</span>
+</div>
+<!-- Task Card 2 (Active) -->
+<div class="card-zen p-md flex items-center gap-md border-l-4 border-[#C8A97E]">
+<div class="w-6 h-6 flex items-center justify-center rounded-lg border-2 border-[#C8A97E] bg-transparent">
+</div>
+<div class="flex-1">
+<h4 class="font-body-md text-body-md font-semibold text-primary">Calculus Problem Set #4</h4>
+<div class="flex gap-2 mt-1">
+<span class="px-2 py-0.5 bg-stone-200/50 rounded-full font-label-caps text-[10px] text-on-surface-variant uppercase">Math</span>
+<span class="flex items-center gap-1 font-label-caps text-[10px] text-error">
+<span class="material-symbols-outlined text-[12px]" data-icon="schedule">schedule</span>
+              2h left
+            </span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="drag_indicator">drag_indicator</span>
+</div>
+<!-- Category Header 2 -->
+<div class="flex items-center justify-between px-1 mt-4">
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase">Later Today</h3>
+</div>
+<!-- Task Card 3 -->
+<div class="card-zen p-md flex items-center gap-md">
+<div class="w-6 h-6 flex items-center justify-center rounded-lg border-2 border-stone-300 bg-transparent">
+</div>
+<div class="flex-1">
+<h4 class="font-body-md text-body-md text-primary">Draft Weekly Reflection</h4>
+<div class="flex gap-2 mt-1">
+<span class="px-2 py-0.5 bg-stone-200/50 rounded-full font-label-caps text-[10px] text-on-surface-variant uppercase">General</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="drag_indicator">drag_indicator</span>
+</div>
+<!-- Task Card 4 -->
+<div class="card-zen p-md flex items-center gap-md">
+<div class="w-6 h-6 flex items-center justify-center rounded-lg border-2 border-stone-300 bg-transparent">
+</div>
+<div class="flex-1">
+<h4 class="font-body-md text-body-md text-primary">Annotate Bibliography</h4>
+<div class="flex gap-2 mt-1">
+<span class="px-2 py-0.5 bg-stone-200/50 rounded-full font-label-caps text-[10px] text-on-surface-variant uppercase">Research</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="drag_indicator">drag_indicator</span>
+</div>
+</section>
+<!-- Floating Action Button -->
+<button class="fixed right-6 bottom-24 w-14 h-14 bg-[#C8A97E] text-[#1E1E1E] rounded-2xl shadow-[0_8px_25px_rgba(200,169,126,0.4)] flex items-center justify-center active:scale-90 transition-transform z-40">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-[#FAF3E0] dark:bg-stone-900 fixed bottom-0 w-full rounded-t-2xl shadow-[0_-4px_25px_rgba(30,30,30,0.08)] z-50 flex justify-around items-center px-4 pb-6 pt-3">
+<div class="flex flex-col items-center justify-center text-[#6B6B6B] dark:text-stone-400 px-3 py-1.5 hover:opacity-80 transition-opacity active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-manrope text-[10px] font-medium tracking-wide uppercase mt-1">Home</span>
+</div>
+<!-- Active State: Tasks -->
+<div class="flex flex-col items-center justify-center text-[#1E1E1E] dark:text-white bg-[#C8A97E] rounded-xl px-3 py-1.5 active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="checklist_rtl">checklist_rtl</span>
+<span class="font-manrope text-[10px] font-medium tracking-wide uppercase mt-1">Tasks</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#6B6B6B] dark:text-stone-400 px-3 py-1.5 hover:opacity-80 transition-opacity active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="font-manrope text-[10px] font-medium tracking-wide uppercase mt-1">Add</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#6B6B6B] dark:text-stone-400 px-3 py-1.5 hover:opacity-80 transition-opacity active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="bar_chart">bar_chart</span>
+<span class="font-manrope text-[10px] font-medium tracking-wide uppercase mt-1">Stats</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#6B6B6B] dark:text-stone-400 px-3 py-1.5 hover:opacity-80 transition-opacity active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+<span class="font-manrope text-[10px] font-medium tracking-wide uppercase mt-1">Insights</span>
+</div>
+</nav>
+</body></html>

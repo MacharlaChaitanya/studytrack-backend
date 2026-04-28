@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Study Session - StudyTrack AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary": "#0a0400",
+                      "on-primary-container": "#878585",
+                      "surface-bright": "#fdf8f8",
+                      "on-tertiary-fixed": "#281800",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "secondary-fixed-dim": "#c7c6c6",
+                      "inverse-surface": "#313030",
+                      "on-secondary-fixed-variant": "#464747",
+                      "on-secondary-fixed": "#1b1c1c",
+                      "outline": "#747878",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed-dim": "#e2c195",
+                      "tertiary-fixed": "#ffddb0",
+                      "inverse-on-surface": "#f4f0ef",
+                      "background": "#fdf8f8",
+                      "secondary-fixed": "#e4e2e2",
+                      "on-error": "#ffffff",
+                      "inverse-primary": "#c8c6c5",
+                      "surface-dim": "#ddd9d8",
+                      "on-primary": "#ffffff",
+                      "surface-container-highest": "#e5e2e1",
+                      "on-tertiary-container": "#9e825a",
+                      "primary-container": "#1e1e1e",
+                      "on-background": "#1c1b1b",
+                      "surface-container-low": "#f7f3f2",
+                      "surface-container": "#f1edec",
+                      "error-container": "#ffdad6",
+                      "tertiary-container": "#2c1b00",
+                      "on-secondary-container": "#626262",
+                      "secondary": "#5e5e5e",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#c4c7c7",
+                      "primary-fixed": "#e5e2e1",
+                      "on-surface": "#1c1b1b",
+                      "on-surface-variant": "#444748",
+                      "surface": "#fdf8f8",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-fixed-variant": "#594320",
+                      "on-secondary": "#ffffff",
+                      "secondary-container": "#e1dfdf",
+                      "surface-variant": "#e5e2e1",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-high": "#ebe7e6",
+                      "on-primary-fixed": "#1b1b1c",
+                      "primary": "#040505",
+                      "surface-tint": "#5f5e5e",
+                      "on-primary-fixed-variant": "#474746",
+                      "accent": "#C8A97E",
+                      "academic-beige": "#F5F5DC",
+                      "academic-cream": "#FAF3E0"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "2xl": "1rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "md": "16px",
+                      "lg": "24px",
+                      "unit": "4px",
+                      "sm": "8px",
+                      "xl": "32px",
+                      "card-gap": "12px",
+                      "xs": "4px",
+                      "container-padding": "20px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Manrope"],
+                      "h3": ["Manrope"],
+                      "body-md": ["Manrope"],
+                      "h2": ["Manrope"],
+                      "label-caps": ["Manrope"],
+                      "button": ["Manrope"],
+                      "h1": ["Manrope"],
+                      "body-sm": ["Manrope"],
+                      "manrope": ["Manrope"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "h3": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                      "button": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+                      "h1": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        body { background-color: #F5F5DC; }
+        .ambient-shadow { box-shadow: 0 4px 15px rgba(30, 30, 30, 0.04); }
+        .modal-shadow { box-shadow: 0 8px 25px rgba(30, 30, 30, 0.08); }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-manrope text-primary selection:bg-accent/30 min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="bg-[#F5F5DC] dark:bg-stone-950 shadow-[0_4px_15px_rgba(30,30,30,0.04)] dark:shadow-none docked full-width top-0 z-50">
+<div class="flex justify-between items-center w-full px-5 h-16 max-w-screen-xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform duration-200 text-[#1E1E1E] dark:text-stone-100">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-xl font-bold tracking-tighter text-[#1E1E1E] dark:text-stone-50">StudyTrack AI</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-full overflow-hidden border border-accent/20">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="Close up portrait of a young man with a thoughtful expression in a bright studio with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJvrPk8TgtGA8OOmx3u7z1hpaMJEILY5RfwX_fvB__1cfkJ17djDMdWTo6vflPATFW21FHeBQCnry29Qi8fLkQ-6kXq8LGEszEEDzyv_Lpt3xAGcpqcnJSdJR6W_vGps23flq2-GltjgE3i2lMEDCTBjy_kbUXHfuUp2xBOUa-9zjge1zAR5afdQkdcP62HdPZ2S4UwbvSG0qpaDzbbP7toij2kdo8WQkMkI6FDP-netegvtTHn7uhSEQaiP5ZNdqSmbUE1LCGwrE"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-screen-sm mx-auto px-container-padding pt-8 pb-12">
+<!-- Session Setup Form -->
+<section class="space-y-6">
+<div class="space-y-2">
+<h2 class="font-h2 text-h2 text-primary">New Study Session</h2>
+<p class="font-body-sm text-body-sm text-secondary">Configure your focus sanctuary and begin.</p>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Subject Dropdown -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-caps text-label-caps text-secondary uppercase px-1">Subject</label>
+<div class="relative">
+<select class="w-full h-12 px-4 appearance-none bg-[#FAF3E0] border-0 rounded-xl font-body-md text-body-md text-primary focus:ring-1.5 focus:ring-accent ambient-shadow">
+<option>Advanced Mathematics</option>
+<option>Neuroscience &amp; Cognition</option>
+<option>Theoretical Physics</option>
+<option>Macroeconomics</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-secondary">expand_more</span>
+</div>
+</div>
+<!-- Topic Input -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-caps text-label-caps text-secondary uppercase px-1">Topic</label>
+<input class="w-full h-12 px-4 bg-[#FAF3E0] border-0 rounded-xl font-body-md text-body-md text-primary focus:ring-1.5 focus:ring-accent ambient-shadow placeholder:text-secondary/50" placeholder="e.g. Fourier Transform Analysis" type="text"/>
+</div>
+<!-- Session Type Chips -->
+<div class="flex flex-col gap-3">
+<label class="font-label-caps text-label-caps text-secondary uppercase px-1">Session Type</label>
+<div class="flex gap-2">
+<button class="flex-1 py-2 rounded-full border border-accent bg-accent text-[#1E1E1E] font-button text-body-sm transition-all duration-200">Study</button>
+<button class="flex-1 py-2 rounded-full border border-outline-variant bg-transparent text-secondary font-button text-body-sm hover:bg-[#FAF3E0] transition-all duration-200">Practice</button>
+<button class="flex-1 py-2 rounded-full border border-outline-variant bg-transparent text-secondary font-button text-body-sm hover:bg-[#FAF3E0] transition-all duration-200">Revision</button>
+</div>
+</div>
+</div>
+<!-- Timer Action -->
+<div class="py-8 flex flex-col items-center justify-center gap-6">
+<div class="relative w-48 h-48 flex items-center justify-center">
+<svg class="absolute w-full h-full -rotate-90">
+<circle class="text-accent/10" cx="96" cy="96" fill="transparent" r="90" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-accent" cx="96" cy="96" fill="transparent" r="90" stroke="currentColor" stroke-dasharray="565.48" stroke-dashoffset="400" stroke-width="4"></circle>
+</svg>
+<div class="text-center z-10">
+<p class="font-h1 text-h1 text-primary">00:00</p>
+<p class="font-label-caps text-[10px] text-secondary tracking-[0.2em] uppercase">Ready</p>
+</div>
+</div>
+<button class="w-full max-w-xs h-16 rounded-2xl bg-primary text-white font-button text-lg flex items-center justify-center gap-3 active:scale-95 transition-all duration-200 modal-shadow">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                    Start Session
+                </button>
+</div>
+<!-- Post-Session Stats Bento Grid -->
+<div class="space-y-4">
+<h3 class="font-h3 text-h3 text-primary pt-4">Post-Session Analysis</h3>
+<div class="grid grid-cols-2 gap-card-gap">
+<!-- Questions Input -->
+<div class="p-4 bg-[#FAF3E0] rounded-2xl ambient-shadow flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary uppercase">Questions</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-accent p-0 font-h2 text-h2 text-primary" placeholder="0" type="number"/>
+</div>
+<!-- Correct Answers Input -->
+<div class="p-4 bg-[#FAF3E0] rounded-2xl ambient-shadow flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary uppercase">Correct</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-accent p-0 font-h2 text-h2 text-primary" placeholder="0" type="number"/>
+</div>
+<!-- Focus Level Selection -->
+<div class="col-span-2 p-5 bg-[#FAF3E0] rounded-2xl ambient-shadow space-y-4">
+<label class="font-label-caps text-label-caps text-secondary uppercase block">Focus Level</label>
+<div class="flex justify-between items-center gap-4">
+<button class="flex-1 flex flex-col items-center gap-2 py-3 rounded-xl border border-outline-variant hover:bg-background transition-colors">
+<span class="material-symbols-outlined text-secondary">battery_1_bar</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Low</span>
+</button>
+<button class="flex-1 flex flex-col items-center gap-2 py-3 rounded-xl border-2 border-accent bg-accent/5 transition-colors">
+<span class="material-symbols-outlined text-accent" style="font-variation-settings: 'FILL' 1;">battery_4_bar</span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-accent">Medium</span>
+</button>
+<button class="flex-1 flex flex-col items-center gap-2 py-3 rounded-xl border border-outline-variant hover:bg-background transition-colors">
+<span class="material-symbols-outlined text-secondary">battery_full</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">High</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Save Action -->
+<button class="w-full h-14 rounded-xl bg-accent text-[#1E1E1E] font-button text-button shadow-lg active:scale-98 transition-all duration-150 mt-8 mb-4">
+                Save Session
+            </button>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#FAF3E0] dark:bg-stone-900 shadow-[0_-4px_25px_rgba(30,30,30,0.08)] border-t border-[#6B6B6B]/10 dark:border-stone-800 rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-[#6B6B6B] dark:text-stone-400 px-3 py-1.5 hover:opacity-80 transition-opacity active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-manrope text-[10px] font-medium tracking-wide uppercase mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#6B6B6B] dark:text-stone-400 px-3 py-1.5 hover:opacity-80 transition-opacity active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">checklist_rtl</span>
+<span class="font-manrope text-[10px] font-medium tracking-wide uppercase mt-1">Tasks</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#1E1E1E] dark:text-white bg-[#C8A97E] rounded-xl px-3 py-1.5 active:scale-90 transition-all duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+<span class="font-manrope text-[10px] font-medium tracking-wide uppercase mt-1">Add</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#6B6B6B] dark:text-stone-400 px-3 py-1.5 hover:opacity-80 transition-opacity active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="font-manrope text-[10px] font-medium tracking-wide uppercase mt-1">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#6B6B6B] dark:text-stone-400 px-3 py-1.5 hover:opacity-80 transition-opacity active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">lightbulb</span>
+<span class="font-manrope text-[10px] font-medium tracking-wide uppercase mt-1">Insights</span>
+</a>
+</nav>
+</body></html>
