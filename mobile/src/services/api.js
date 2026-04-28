@@ -10,9 +10,9 @@ import axios from 'axios';
 
 // ── Base URL ─────────────────────────────────────────────
 // Replace with your ngrok / production URL when deploying
-const BASE_URL = 'http://10.0.2.2:8000'; // Android emulator → host machine
+const BASE_URL = 'https://studytrack-backend-d5l6.onrender.com'; // Production URL
+// const BASE_URL = 'http://10.0.2.2:8000'; // Android emulator → host machine
 // const BASE_URL = 'http://localhost:8000';     // iOS simulator
-// const BASE_URL = 'https://YOUR_NGROK_URL';    // Real device / production
 
 const api = axios.create({
   baseURL: BASE_URL,
