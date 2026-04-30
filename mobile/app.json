@@ -31,6 +31,10 @@
         "projectId": "feabe980-fcf5-407c-abc7-ef91702dfb47"
       }
     },
-    "owner": "chaitanya-organization"
+    "owner": "chaitanya-organization",
+    "plugins": [
+      "expo-font",
+      "expo-secure-store"
+    ]
   }
 }
