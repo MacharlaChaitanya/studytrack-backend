@@ -8,7 +8,7 @@ load_dotenv()
 from routes import sessions, stats, tasks, analysis, insights, actions, plan, action, users
 
 app = FastAPI(
-    title="StudyTrack AI",
+    title="Sphere",
     description="An AI-powered study performance system that tracks, analyzes, and improves student outcomes.",
     version="1.0.0"
 )
@@ -38,7 +38,7 @@ app.include_router(users.router, prefix="/users", tags=["Users"])
 def read_root():
     return {
         "status": "ok",
-        "app": "StudyTrack AI",
+        "app": "Sphere",
         "version": "1.0.0",
         "database": "Supabase (PostgreSQL)",
         "docs": "/docs"

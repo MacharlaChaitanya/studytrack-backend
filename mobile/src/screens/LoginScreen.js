@@ -57,7 +57,7 @@ export default function LoginScreen({ navigation }) {
           <View style={styles.logoCircle}>
             <Ionicons name="school" size={36} color={COLORS.primary} />
           </View>
-          <Text style={styles.logoText}>StudyTrack AI</Text>
+          <Text style={styles.logoText}>Sphere</Text>
           <Text style={styles.subtitle}>Focus. Learn. Grow.</Text>
         </View>
 

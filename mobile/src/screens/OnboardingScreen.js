@@ -64,7 +64,7 @@ export default function OnboardingScreen() {
         target_exam: exam,
         daily_goal_hours: goal,
       });
-      toast.show('Welcome to StudyTrack AI! 🎉', 'success');
+      toast.show('Welcome to Sphere! 🎉', 'success');
       // Navigation happens automatically via AppContext detecting onboarded state
     } catch (err) {
       toast.show(err.message || 'Failed to save profile', 'error');

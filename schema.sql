@@ -1,5 +1,5 @@
 -- ================================================
--- StudyTrack AI — Supabase PostgreSQL Schema
+-- Sphere — Supabase PostgreSQL Schema
 -- Run this in your Supabase SQL Editor
 -- ================================================
 

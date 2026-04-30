@@ -1,5 +1,5 @@
 /**
- * StudyTrack AI — API Service Layer
+ * Sphere — API Service Layer
  * All backend communication via Axios
  *
  * IMPORTANT: Every API response is wrapped as { status, message, data }.

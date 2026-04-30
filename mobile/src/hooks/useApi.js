@@ -1,5 +1,5 @@
 /**
- * StudyTrack AI — Reusable API Hook
+ * Sphere — Reusable API Hook
  * Optimized: avoids flickering on refresh, preserves stale data during re-fetch,
  * memoized params, and cancellation-safe via mounted flag.
  */

@@ -1,5 +1,5 @@
 /**
- * StudyTrack AI — Global App Context
+ * Sphere — Global App Context
  * Provides userId (from auth), global refresh trigger, and onboarded state.
  */
 

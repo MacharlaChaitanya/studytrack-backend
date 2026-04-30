@@ -1,5 +1,5 @@
 /**
- * StudyTrack AI — Design System Tokens
+ * Sphere — Design System Tokens
  * Extracted from Stitch "Serene Scholar" design system
  */
 

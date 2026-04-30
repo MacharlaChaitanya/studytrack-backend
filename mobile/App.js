@@ -1,5 +1,5 @@
 /**
- * StudyTrack AI — App Entry Point
+ * Sphere — App Entry Point
  * Production-ready React Native (Expo) app with Supabase Auth
  */
 import React from 'react';

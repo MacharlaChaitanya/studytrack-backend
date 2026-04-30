@@ -63,7 +63,7 @@ export default function SignupScreen({ navigation }) {
         </View>
 
         <Text style={styles.title}>Create Account</Text>
-        <Text style={styles.subtitle}>Join StudyTrack AI and start learning smarter.</Text>
+        <Text style={styles.subtitle}>Join Sphere and start learning smarter.</Text>
 
         {/* Error */}
         {error ? (

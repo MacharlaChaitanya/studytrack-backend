@@ -7,7 +7,7 @@ BASE_URL = "http://127.0.0.1:8000"
 TEST_USER_ID = "00000000-0000-0000-0000-000000000000"
 
 def test_api():
-    print("Testing StudyTrack AI Endpoints with Supabase...")
+    print("Testing Sphere Endpoints with Supabase...")
     
     from utils.supabase_client import get_supabase
     db = get_supabase()

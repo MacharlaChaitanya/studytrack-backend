@@ -1,4 +1,4 @@
-# StudyTrack AI - Render Deployment Instructions
+# Sphere - Render Deployment Instructions
 
 The backend is fully configured and ready for production deployment on [Render](https://render.com). Follow these exact steps to get your FastAPI backend live.
 
@@ -69,7 +69,7 @@ Render will now build and deploy your application. Once the status says **Live**
 Test your deployment by visiting the following URLs in your browser or Postman:
 
 1. **Root Status Check:** `GET https://YOUR_RENDER_URL/`
-   - Expected Output: `{"status":"ok", "app":"StudyTrack AI", "version":"1.0.0", ...}`
+   - Expected Output: `{"status":"ok", "app":"Sphere", "version":"1.0.0", ...}`
 2. **API Documentation:** `GET https://YOUR_RENDER_URL/docs`
    - Expected Output: The Swagger UI page showing all your endpoints.
 3. **Test an Endpoint:** `GET https://YOUR_RENDER_URL/plan/today` (Might require authentication or query params based on your logic)
